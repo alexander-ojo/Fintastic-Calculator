@@ -1,0 +1,71 @@
+INDEX.HTML
+<!--contains all the logic with inline Javascript for button functionality on the calculator->
+<!-programmer: Mustafa Mohsin->
+<!-Date Coded: July 18, 2020->
+<!-Date Approved: Aug 3, 2020->
+<!-Approved by: All group members->
+<!-Arguments: The arguments are the event listeners that activate the code, and the files accessed (onclick)->
+<!-Variables: variables for html include “class”, “id”, “lang”, “href”, “type”, “placeholder”,“src” and, “value”.->
+<!-Files accessed: accesses the styles.css file to color the GUI,and the Javascript file, app1.js->
+<!-Files Changed: None->
+<!-Inputs: text input for the calc-screen class, button click input for all of the buttons->
+<!-Outputs: any text input will be output on the calculator screen, as well as any number or operator buttons->
+<!-Error handling: None->
+<!-List of previous modifications and who approved:->
+1.Adding Javascript inline - Approved by all
+2.Adding more placeholders for GUI - Approved by all
+3.Removing redundant classes - Approved by all
+Changing class names and other tasks - Approved by all
+<!-Any known faults: None-->
+
+<!DOCTYPE html>
+<html>
+<link rel = "stylesheet" href="styles.css">
+
+  <div class="container">
+    <form class="calc-body"  name="calc">
+
+      <div class="calc-screen" id="screen">
+        <div class="calc-operation" id="prev">Fin-tastic! Calculator</div>
+        <input type="text" name="answer" class="calc-typed" id="value" />
+      </div>
+
+      <div class="calc-button-row">
+        <input type ="button" class="button 1" value="TVM" id="TVM"/>
+        <input type="button" class="button 1" value="ATVM" id="ATVM"/>
+        <input type="button" class="button c" value="C" onclick="calc.answer.value =''"/>
+        <button type="button" class="button l" id="dark" >DM </button>    
+      </div>
+
+      <div class="calc-button-row">
+        <input type="button" class="button" value="7"  onclick="calc.answer.value +='7'"/> 
+        <input type="button" class="button"  value="8"  onclick="calc.answer.value +='8'"/> 
+        <input type="button" class="button" value="9"  onclick="calc.answer.value +='9'"/> 
+        <input type="button" class="button l" value="*"  onclick="calc.answer.value +='*'"/> 
+      </div>
+
+      <div class="calc-button-row">
+        <input type="button" class="button" class="button" value="4"  onclick="calc.answer.value +='4'"/> 
+        <input type="button" class="button" class="button" value="5"  onclick="calc.answer.value +='5'"/> 
+        <input type="button" class="button" class="button" value="6"  onclick="calc.answer.value +='6'"/> 
+        <input type="button" class="button l" class="button" value="-"  onclick="calc.answer.value +='-'"/> 
+      </div>
+
+      <div class="calc-button-row">
+        <input type="button" class="button" class="button" value="1"  onclick="calc.answer.value +='1'"/> 
+        <input type="button" class="button" class="button" value="2"  onclick="calc.answer.value +='2'"/> 
+        <input type="button" class="button" class="button" value="3"  onclick="calc.answer.value +='3'"/> 
+        <input type="button" class="button l" class="button" value="+"  onclick="calc.answer.value +='+'"/> 
+      </div>
+
+      <div class="calc-button-row">
+        <input type="button" class="button" class="button" value="."  onclick="calc.answer.value +='.'"/> 
+        <input type="button" class="button" class="button" value="0"  onclick="calc.answer.value +='0'"/> 
+        <input type="button" class="button" class="button" value="/"  onclick="calc.answer.value +='/'"/> 
+        <input type="button" class="button l" id="equal" value="=" onclick="calc.answer.value = eval(calc.answer.value)"/> 
+        </div>
+
+    </form>
+<script src="app1.js"></script>
+  
+</html>
